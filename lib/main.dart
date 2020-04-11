@@ -1,6 +1,11 @@
+import 'package:androbi/features/quote/presentation/pages/QuotePage.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'injection_container.dart' as di;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   runApp(MyApp());
 }
 
@@ -9,11 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'AndroBI',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Container(child: Center(child: Text('Flutter Demo Home Page'))),
+      home: QuotePage(),
     );
   }
 }

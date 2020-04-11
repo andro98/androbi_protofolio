@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
 class Quote extends Equatable {
-  final String name;
+  /*final String name;
   final String title;
   final String bio;
   final String photo;
@@ -24,19 +24,22 @@ class Quote extends Equatable {
     @required this.email_url,
     @required this.twiter_url,
     @required this.stackoverflow_url,
-  });
+  }) : super([
+          name,
+          title,
+          bio,
+          photo,
+          facebook_url,
+          github_url,
+          linkedin_url,
+          email_url,
+          twiter_url,
+          stackoverflow_url
+        ]);*/
 
-  @override
-  List<Object> get props => [
-        name,
-        title,
-        bio,
-        photo,
-        facebook_url,
-        github_url,
-        linkedin_url,
-        email_url,
-        twiter_url,
-        stackoverflow_url
-      ];
+  final String quote_desc;
+  final String quote_writer;
+
+  Quote({@required this.quote_desc, @required this.quote_writer})
+      : super([quote_desc, quote_writer]);
 }
