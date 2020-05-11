@@ -29,23 +29,6 @@ class _QuotePageState extends State<QuotePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyAppBar(),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/img/background.png"),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: buildBody(context),
-        ),
-      ),
-    );
-  }
-
-  BlocProvider<QuoteBloc> buildBody(BuildContext context) {
     return BlocProvider(
       create: (_) => bl,
       child: BlocBuilder<QuoteBloc, QuoteState>(builder: (context, state) {
@@ -54,7 +37,7 @@ class _QuotePageState extends State<QuotePage> {
             child: CircularProgressIndicator(),
           );
         } else if (state is Loaded) {
-          return Center(child: QuoteDisplay(state.quote));
+          return QuoteDisplay(state.quote);
         } else if (state is Error) {
           return Center(
             child: Text(state.message),
