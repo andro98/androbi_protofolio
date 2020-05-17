@@ -16,12 +16,10 @@ class QuoteRemoteDataSourceImpl implements QuoteRemoteDataSource {
 
   @override
   Future<QuoteModel> getQuote() async {
-    print('In Datasource');
     final response =
         await firestore.collection('quotes').getDocuments().catchError(() {
       throw ServerException();
     });
-    print('After calling firestore');
     final Random random = Random();
     final int newIndex = random.nextInt(response.documents.length);
     return QuoteModel.fromJson(response.documents[newIndex].data);

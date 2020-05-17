@@ -17,6 +17,13 @@ class Styles{
     fontFamily: 'serif',
   );
 
+  static final TextStyle yellow20 = TextStyle(
+    fontSize: 20.0,
+    color: Palette.fourthColor,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'serif',
+  );
+
   static final TextStyle yellow15 = TextStyle(
     fontSize: 15.0,
     color: Palette.fourthColor,
@@ -30,6 +37,21 @@ class Styles{
     fontWeight: FontWeight.bold,
     fontFamily: 'serif',
   );
+
+  static final TextStyle skillText = TextStyle(
+    fontSize: 40.0,
+    color: Palette.firstColor,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'serif',
+  );
+
+  static final TextStyle date = TextStyle(
+    fontSize: 20.0,
+    color: Palette.firstColor,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'serif',
+  );
+
   static final TextStyle button30 = TextStyle(
     fontSize: 25.0,
     color: Palette.fifthColor,
@@ -40,6 +62,14 @@ class Styles{
 
   static final TextStyle desc30 = TextStyle(
     fontSize: 35.0,
+    color: Palette.thirdColor,
+    fontWeight: FontWeight.normal,
+    fontStyle: FontStyle.italic,
+    fontFamily: 'serif',
+  );
+
+  static final TextStyle desc20 = TextStyle(
+    fontSize: 25.0,
     color: Palette.thirdColor,
     fontWeight: FontWeight.normal,
     fontStyle: FontStyle.italic,

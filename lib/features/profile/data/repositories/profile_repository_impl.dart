@@ -14,7 +14,6 @@ class ProfileRepositoryImpl extends ProfileRepository {
   @override
   Future<Either<Failure, Profile>> getProfile() async {
     try {
-      print('Goinf To Impl');
       final profile = await profileRemoteDataSource.getProfile();
       return Right(profile);
     } on ServerException {

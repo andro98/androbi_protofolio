@@ -14,7 +14,6 @@ class QuoteRepositoryImpl extends QuoteRepository {
   @override
   Future<Either<Failure, Quote>> getQuote() async {
     try {
-      print('Goinf To Impl');
       final quote = await quoteRemoteDataSource.getQuote();
       return Right(quote);
     } on ServerException {

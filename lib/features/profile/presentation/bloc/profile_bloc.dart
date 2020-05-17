@@ -29,11 +29,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   ) async* {
     if (event is GetProfile) {
       yield Loading();
-      print('Calling GetQuote In QuoteBloc');
       final failureOrQuote = await getProfile(NoParams());
-      print('Called GetQuote In QuoteBloc');
       yield* _eitherLoadedOrErrorState(failureOrQuote);
-      print('Yielded');
     }
   }
 

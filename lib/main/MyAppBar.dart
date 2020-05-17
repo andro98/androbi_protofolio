@@ -9,7 +9,6 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    print(size.width);
     if (size.width <= 650)
       return smallAppBar(context);
     else
@@ -38,9 +37,9 @@ class MyAppBar extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           smallButtonBar(Icons.home, Pages.Quote, context),
-          smallButtonBar(Icons.settings, Pages.Quote, context),
-          smallButtonBar(Icons.memory, Pages.Quote, context),
-          smallButtonBar(Icons.computer, Pages.Quote, context),
+          smallButtonBar(Icons.settings, Pages.Skills, context),
+          smallButtonBar(Icons.memory, Pages.Experience, context),
+          smallButtonBar(Icons.computer, Pages.Tutorials, context),
           smallButtonBar(Icons.contacts, Pages.Contact, context),
         ],
       ),
@@ -69,9 +68,10 @@ class MyAppBar extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           buttonBar('Home', Styles.button30, Pages.Quote, context),
-          buttonBar('Skills', Styles.button30, Pages.Quote, context),
-          buttonBar('Experience', Styles.button30, Pages.Quote, context),
-          buttonBar('Projects', Styles.button30, Pages.Quote, context),
+          buttonBar('Skills', Styles.button30, Pages.Skills, context),
+          buttonBar('Experience', Styles.button30, Pages.Experience, context),
+          //buttonBar('Projects', Styles.button30, Pages.Quote, context),
+          buttonBar('Tutorials', Styles.button30, Pages.Tutorials, context),
           buttonBar('Contact Us', Styles.button30, Pages.Contact, context),
         ],
       ),

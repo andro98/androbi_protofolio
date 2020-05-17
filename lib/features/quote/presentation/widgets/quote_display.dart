@@ -11,9 +11,7 @@ class QuoteDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-        top: 100.0,
-        left: 50.0,
-        right: 50.0,
+        top: 50.0,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

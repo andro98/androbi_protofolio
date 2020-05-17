@@ -29,11 +29,8 @@ class QuoteBloc extends Bloc<QuoteEvent, QuoteState> {
   ) async* {
     if (event is GetQuote) {
       yield Loading();
-      print('Calling GetQuote In QuoteBloc');
       final failureOrQuote = await getQuote(NoParams());
-      print('Called GetQuote In QuoteBloc');
       yield* _eitherLoadedOrErrorState(failureOrQuote);
-      print('Yielded');
     }
   }
 
